@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--=============== BOXICONS ===============-->
+
+     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+     <!--=============== CSS ===============--> 
+
+     <link rel="stylesheet" href="../css/style.css">
+
+     <!--=============== ICON ===============--> 
+
+     <link rel="icon" href="../assets/wolfy.png">
+
+     <!--=============== TITLE ===============--> 
+
+     <title>Wolfy</title>
+
+     <!--=============== SCRIPT ===============--> 
+
+     <script src="../javascript/jquery-3.5.1.js"></script>
+     <script src="../javascript/navigators.js"></script>
+     <script src="../javascript/index.js"></script>
+     <script src="../javascript/main.js"></script>
+   </head>
+   <body>
+    <div class="sidebar">
+        <div class="logo-details">
+          <img src="../assets/wolfy.png" width="30" height="30" class="bx bxl-c-plus-plus icon">
+            <div class="logo_name">WolfyBot</div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+          <li>
+              <i class='bx bx-search' ></i>
+             <input type="text" id="myInput" onkeyup="myFunction()" type="text" placeholder="Search...">
+             <span class="tooltip">Search</span>
+          </li>
+          <ul class="nav-list" id="myUL">
+            <li>
+              <a href="../index.html">
+                <i class='bx bx-home' ></i>
+                <span class="links_name">Home</span>
+              </a>
+               <span class="tooltip">Home page</span>
+            </li>
+          <li>
+           <a href="#">
+            <i class='bx bxs-server' ></i>
+             <span class="links_name">Server Management</span>
+           </a>
+           <span class="tooltip">Server Management</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-chat' ></i>
+             <span class="links_name">Messages</span>
+           </a>
+           <span class="tooltip">Messages</span>
+         </li>
+         <li>
+           <a href="pages/terms.html">
+             <i class='bx bxs-shopping-bags'></i>
+             <span class="links_name">Terms</span>
+           </a>
+           <span class="tooltip">Terms of service page!</span>
+         </li>
+         <li>
+           <a href="#">
+            <i class='bx bx-command' ></i>
+             <span class="links_name">Commands</span>
+           </a>
+           <span class="tooltip">Commands</span>
+         </li>
+         <li>
+           <a href="#">
+            <i class='bx bxs-contact' ></i>
+             <span class="links_name">Contact</span>
+           </a>
+           <span class="tooltip">Contact</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-heart' ></i>
+             <span class="links_name">Saved</span>
+           </a>
+           <span class="tooltip">Saved</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-cog' ></i>
+             <span class="links_name">Settings</span>
+           </a>
+           <span class="tooltip">Settings</span>
+         </li>
+         <li class="profile">
+             <div class="profile-details">
+               <img src="../assets/user.png" alt="profileImg">
+               <div class="name_job">
+                 <div class="name">Unkown User</div>
+                </div>
+              </div>
+              <div class="LOGIN">
+              <a id="LOGIN" href="/">
+              <i class='bx bx-log-in' id="log_out" ></i>
+              </a>
+            </div>
+          </li>
+          </div>
+      <section class="commands-section">
+    
+        <!--==================== HEADER ====================-->
+        
+        <nav class="nav-bar" id="header">
+          <div class="nav-bar-img">
+            <img src="../assets/wolfy.png" alt="">
+            <h1>Wolfy</h1>
+          </div>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <div class="nav-bar-links">
+            <ul>
+              <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class='bx bx-menu'></i>
+              </a> -->
+              <li><a href="../index.html">HOME</a></li>
+              <li><a href="./commands.html">COMMANDS</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">INVITE</a></li>
+            </ul>
+                              <a href="javascript:void(0);" class="icon">
+                                <i class='bx bx-menu' id="oi" onclick="Show()"></i>
+                                <i class='bx bx-x' id="io" onclick="Hide()"></i>
+                              </a>
+          </div>
+        </nav>
+        <div class="content-commands">
+            <div class="commands-content">
+              <h1>
+                Wolfy's terms of service
+              </h1>
+            </div>
+        <div class="content-commands-container">
+            <div class="content-commands-column-2">
+              <div class="content-commands-column-2-left">
+                <h1>1. Introduction</h1>
+                <p>
+                    Wolfy is a discord bot that provides various features such as moderation, information, music, search, logs, suggestions, economy, and leveling system.
+                </p>
+                <P>
+                    By using Wolfy, you agree to abide by these terms of service.
+                </P>
+                <h1>2. Use of Wolfy.</h1>
+                <p>
+                    Wolfy is intended for use on Discord servers and should not be used for any illegal or unauthorized activities.
+                </p>
+                <P>
+                    You are responsible for the actions of your server members when using Wolfy.
+                </P>
+                <h1>3. Limitations of Liability</h1>
+                <p>
+                    Wolfy is provided "as is" and the developers of Wolfy will not be held liable for any damages arising from the use of the bot.
+                </p>
+                <P>
+                    The developers of Wolfy reserve the right to discontinue the bot at any time and will not be liable for any damages caused by the discontinuation of the bot.
+                </P>
+                <h1>4. Changes to Terms of Service</h1>
+                <p>
+                    The developers of Wolfy reserve the right to update and change these terms of service at any time.
+                </p>
+                <P>
+                    Your continued use of Wolfy after any changes to these terms of service indicates your acceptance of the new terms.
+                </P>
+                <h1>Contact Information</h1>
+                <p>
+                    If you have any questions or concerns about these terms of service or the use of Wolfy, please contact the developers of the bot.
+                </p>
+              </div>
+            </div>
+        </div>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  // Search script
+function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+  
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+    function Show() {
+        let lists = document.querySelectorAll(".nav-bar-links > ul li")
+        let oi = document.getElementById("oi")
+        let io = document.getElementById("io")
+
+        lists.forEach(list => {
+          list.style.display = "block"
+        })
+        oi.style.display = "none";
+        io.style.display = "block";
+      }
+
+      function Hide() {
+        let lists = document.querySelectorAll(".nav-bar-links > ul li")
+        let li = document.querySelector(".nav-bar-links ul")
+        let oi = document.getElementById("oi")
+        let io = document.getElementById("io")
+
+        lists.forEach(list => {
+          list.style.display = "none"
+        })
+        io.style.display = "none";
+        oi.style.display = "block";
+      }
+
+      window.onload = () => {
+const fragment = new URLSearchParams(window.location.hash.slice(1));
+const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
+
+if (!accessToken) {
+  return document.getElementById('LOGIN').href = 'https://discord.com/api/oauth2/authorize?client_id=821655420410003497&redirect_uri=http%3A%2F%2Flocalhost%3A49681%2Fauth%2Fdiscord&response_type=token&scope=identify'
+}
+
+fetch('https://discord.com/api/users/@me', {
+    headers: {
+        authorization: `${tokenType} ${accessToken}`,
+    },
+})
+.then(result => result.json())
+.then(response => {
+    console.log(response)
+    const { username, discriminator, avatar, id} = response;
+    //set the welcome username string
+    document.getElementById('name').innerText = ` ${username}#${discriminator}`;
+
+    //set the avatar image by constructing a url to access discord's cdn
+    document.getElementById("avatar").src = `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`;
+})
+.catch(console.error);
+};
+  </script>
+</body>
+</html>

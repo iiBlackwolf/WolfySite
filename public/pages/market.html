@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <!--=============== SWIPER CSS ===============-->
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!--=============== BOXICONS ===============-->
+    
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!--=============== CSS ===============--> 
+    
+    <link rel="stylesheet" href="../css/market.css">
+    <!--=============== TITLE ===============--> 
+
+    <title>Wolfy</title>
+    <!--=============== ICON ===============--> 
+
+    <link rel="icon" href="../assets/wolfy.png">
+   </head>
+
+   <body>
+    <div class="sidebar">
+        <div class="logo-details">
+          <img src="../assets/wolfy.png" width="30" height="30" class="bx bxl-c-plus-plus icon">
+            <div class="logo_name">WolfyBot</div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+          <li>
+              <i class='bx bx-search' ></i>
+             <input type="text" id="myInput" onkeyup="myFunction()" type="text" placeholder="Search...">
+             <span class="tooltip">Search</span>
+          </li>
+          <ul class="nav-list" id="myUL">
+            <li>
+              <a href="../index.html">
+                <i class='bx bx-home' ></i>
+                <span class="links_name">Home</span>
+              </a>
+               <span class="tooltip">Home page</span>
+            </li>
+          <li>
+           <a href="#">
+            <i class='bx bxs-server' ></i>
+             <span class="links_name">Server Management</span>
+           </a>
+           <span class="tooltip">Server Management</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-chat' ></i>
+             <span class="links_name">Messages</span>
+           </a>
+           <span class="tooltip">Messages</span>
+         </li>
+         <li>
+           <a href="#/">
+             <i class='bx bxs-shopping-bags'></i>
+             <span class="links_name">Market</span>
+           </a>
+           <span class="tooltip">Market</span>
+         </li>
+         <li>
+           <a href="pages/test.html">
+            <i class='bx bx-command' ></i>
+             <span class="links_name">Commands</span>
+           </a>
+           <span class="tooltip">Commands</span>
+         </li>
+         <li>
+           <a href="#">
+            <i class='bx bxs-contact' ></i>
+             <span class="links_name">Contact</span>
+           </a>
+           <span class="tooltip">Contact</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-heart' ></i>
+             <span class="links_name">Saved</span>
+           </a>
+           <span class="tooltip">Saved</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-cog' ></i>
+             <span class="links_name">Settings</span>
+           </a>
+           <span class="tooltip">Settings</span>
+         </li>
+         <li class="profile">
+             <div class="profile-details">
+               <img src="../assets/user.png" alt="profileImg">
+               <div class="name_job">
+                 <div class="name">Unkown User</div>
+               </div>
+             </div>
+             <i class='bx bx-log-out' id="log_out" ></i>
+         </li>
+        </ul>
+      </div>
+      <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+      </script>
+   </body>
+</html>
