@@ -11,12 +11,12 @@
 
      <!--=============== CSS ===============--> 
 
-     <link rel="stylesheet" type="text/css" href="/css/style.css">
-
+     <link rel="stylesheet" type="text/css" href="./css/style.css">
+     
 
      <!--=============== ICON ===============--> 
 
-     <link rel="icon" src="/assets/wolfy.png">
+     <link rel="icon" href="./assets/wolfy.png">
 
      <!--=============== TITLE ===============--> 
 
@@ -25,7 +25,7 @@
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <img src="/assets/wolfy.png" width="30" height="30" class="bx bxl-c-plus-plus icon">
+      <img src="./assets/wolfy.png" width="30" height="30" class="bx bxl-c-plus-plus icon">
         <div class="logo_name">WolfyBot</div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
@@ -50,18 +50,18 @@
        <span class="tooltip">Server Management</span>
      </li>
      <li>
-       <a href="#">
-         <i class='bx bx-chat' ></i>
-         <span class="links_name">Messages</span>
-       </a>
-       <span class="tooltip">Messages</span>
-     </li>
-     <li>
-       <a href="pages/terms.html">
-         <i class='bx bxs-shopping-bags'></i>
+       <a href="pages/Terms.html">
+        <i class='bx bxs-check-shield' ></i>
          <span class="links_name">Terms</span>
        </a>
        <span class="tooltip">Terms of service page!</span>
+     </li>
+     <li>
+       <a href="pages/Privacy.html">
+        <i class='bx bxs-lock-alt' ></i>
+         <span class="links_name">Privacy</span>
+       </a>
+       <span class="tooltip">Privacy of service page!</span>
      </li>
      <li>
        <a href="pages/commands.html">
@@ -94,14 +94,14 @@
     </ul>
     <li class="profile">
       <div class="profile-details">
-        <img id="avatar" src="/assets/user.png" alt="profileImg">
+        <img id="avatar" src="assets/user.png" alt="profileImg">
         <div class="name_job">
           <div id="name" class="name">Unkown User</div>
         </div>
       </div>
       <div class="LOGIN">
       <a id="LOGIN" href="/">
-      <i class='bx bx-log-out' id="log_out"></i>
+      <i class='bx bx-log-in' id="log_out" ></i>
       </a>
     </div>
   </li>
@@ -112,7 +112,7 @@
     
     <nav class="nav-bar" id="header">
       <div class="nav-bar-img">
-        <img src="/assets/wolfy.png" alt="">
+        <img src="./assets/wolfy.png" alt="">
         <h1>Wolfy</h1>
       </div>
         <span class="bar"></span>
@@ -123,8 +123,8 @@
         <ul>
 
           <li><a href="#" class="">HOME</a></li>
-          <li><a href="/pages/commands.html">COMMANDS</a></li>
-          <li><a href="#">MARKET</a></li>
+          <li><a href="pages/commands.html">COMMANDS</a></li>
+          <li><a href="pages/Terms.html">Terms of service</a></li>
           <li><a href="https://discord.com/api/oauth2/authorize?client_id=821655420410003497&permissions=8&scope=bot%20applications.commands" target="_blank">INVITE</a></li>
         </ul>
                   <a href="javascript:void(0);" class="icon">
@@ -137,7 +137,7 @@
       <div class="main-content">
       <div class="main-content-children">
         <div class="floating">
-        <img src="/assets/wolfy.png" width="350" height="350">
+        <img src="./assets/wolfy.png" width="350" height="350">
         </div>
         </div>
         <div class="main-content-children">
@@ -155,35 +155,35 @@
             <div class="feature-row">
               <div class="feature-column">
                 <div class="feature-column-image">
-                  <img src="/assets/profile_card.png" alt="">
+                  <img src="./assets/profile_card.png" alt="">
                 </div>
               </div>
               <div class="feature-column">
                 <h1>Economy system is here!</h1>
                 <p>Earn credits and buy custom background, badges, LevelBackgrounds and more!</p>
-                <p>Visit <a href="#">Market</a> for more details!</p>
+                <p>Visit <a href="#">Market(Soon)</a> for more details!</p>
               </div>
             </div><div class="feature-row">
               <div class="feature-column">
                 <h1>Moderation commands!</h1>
                 <p>Some one is not following the rules in your server? you can moderate your server with wolfy!</p>
-                <p>Visit <a href="#">Guides/Anischedule</a> for more details!</p>
+                <p>Visit <a href="pages/commands.html">Commands page</a> for more details!</p>
               </div>
               <div class="feature-column">
                 <div class="feature-column-image">
-                  <img src="/assets/Mod_image.png" alt="">
+                  <img src="./assets/Mod_image.png" alt="">
                 </div>
               </div>
             </div><div class="feature-row last-row">
               <div class="feature-column">
                 <div class="feature-column-image">
-                  <img src="/assets/steam.png" alt="">
+                  <img src="./assets/steam.png" alt="">
                 </div>
               </div>
               <div class="feature-column">
                 <h1>Track your game on steam!</h1>
                 <p>You can use wolfy to see your fav game details like: (price, platforms, informations, sales, etc...)</p>
-                <p>Visit <a href="#">Guides/Anischedule</a> for more details!</p>
+                <p>Visit <a href="pages/commands.html">Commands page</a> for more details!</p>
               </div>
             </div>
           </div>
@@ -275,7 +275,7 @@ function myFunction() {
       oi.style.display = "block";
   }
 
-  window.onload = async () => {
+  window.onload = () => {
 const fragment = new URLSearchParams(window.location.hash.slice(1));
 const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
 
@@ -299,15 +299,7 @@ fetch('https://discord.com/api/users/@me', {
     document.getElementById("avatar").src = `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`;
 })
 .catch(console.error);
-		// Create an instance of the URL class
-    const createdUrl = new URL(`https://localhost:49681`);
-
-// Assign values to the properties on the url instance
-createdUrl.pathname = '/p/a/t/h';
-createdUrl.search = '?query=string';
-
-createdUrl.toString(); // Creates https://www.example.com/p/a/t/h?query=string
 };
-</script>
+  </script>
 </body>
 </html>

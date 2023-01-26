@@ -25,6 +25,7 @@
 
      <script src="../javascript/jquery-3.5.1.js"></script>
      <script src="../javascript/navigators.js"></script>
+     <script src="../javascript/index.js"></script>
      <script src="../javascript/main.js"></script>
    </head>
 <body>
@@ -40,13 +41,13 @@
          <span class="tooltip">Search</span>
       </li>
       <ul class="nav-list" id="myUL">
-        <li>
-          <a href="../Home.html">
-            <i class='bx bx-home' ></i>
-            <span class="links_name">Home</span>
-          </a>
-           <span class="tooltip">Home page</span>
-        </li>
+      <li>
+        <a href="../index.html">
+          <i class='bx bx-home' ></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home page</span>
+      </li>
       <li>
        <a href="#">
         <i class='bx bxs-server' ></i>
@@ -55,18 +56,18 @@
        <span class="tooltip">Server Management</span>
      </li>
      <li>
-       <a href="#">
-         <i class='bx bx-chat' ></i>
-         <span class="links_name">Messages</span>
+       <a href="pages/Terms.html">
+        <i class='bx bxs-check-shield' ></i>
+         <span class="links_name">Terms</span>
        </a>
-       <span class="tooltip">Messages</span>
+       <span class="tooltip">Terms of service page!</span>
      </li>
      <li>
-       <a href="pages/market.html">
-         <i class='bx bxs-shopping-bags'></i>
-         <span class="links_name">Market</span>
+       <a href="pages/Privacy.html">
+        <i class='bx bxs-lock-alt' ></i>
+         <span class="links_name">Privacy</span>
        </a>
-       <span class="tooltip">Market</span>
+       <span class="tooltip">Privacy of service page!</span>
      </li>
      <li>
        <a href="#">
@@ -76,7 +77,7 @@
        <span class="tooltip">Commands</span>
      </li>
      <li>
-       <a href="#">
+       <a>
         <i class='bx bxs-contact' ></i>
          <span class="links_name">Contact</span>
        </a>
@@ -96,20 +97,20 @@
        </a>
        <span class="tooltip">Settings</span>
      </li>
-     <li class="profile">
-         <div class="profile-details">
-           <img src="../assets/user.png" alt="profileImg">
-           <div class="name_job">
-             <div class="name">Unkown User</div>
-           </div>
-           <div class="LOGIN">
-            <a id="LOGIN" href="/">
-            <i class='bx bx-log-out' id="log_out"></i>
-            </a>
-           </div>
-         </div>
-     </li> 
     </ul>
+    <li class="profile">
+      <div class="profile-details">
+        <img id="avatar" src="../assets/user.png" alt="profileImg">
+        <div class="name_job">
+          <div id="name" class="name">Unkown User</div>
+        </div>
+      </div>
+      <div class="LOGIN">
+      <a id="LOGIN" href="/">
+      <i class='bx bx-log-in' id="log_out" ></i>
+      </a>
+    </div>
+  </li>
   </div>
   <section class="commands-section">
 
@@ -129,15 +130,15 @@
           <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class='bx bx-menu'></i>
           </a> -->
-          <li><a href="../Home.html">HOME</a></li>
+          <li><a href="../index.html">HOME</a></li>
           <li><a href="#" class="active">COMMANDS</a></li>
           <li><a href="#">MARKET</a></li>
-          <li><a href="#">INVITE</a></li>
+          <li><a href="https://discord.com/api/oauth2/authorize?client_id=821655420410003497&permissions=8&scope=bot%20applications.commands">INVITE</a></li>
         </ul>
-        <a href="javascript:void(0);" class="icon">
-          <i class='bx bx-menu' id="oi" onclick="Show()"></i>
-          <i class='bx bx-x' id="io" onclick="Hide()"></i>
-        </a>
+                          <a href="javascript:void(0);" class="icon">
+                            <i class='bx bx-menu' id="oi" onclick="Show()"></i>
+                            <i class='bx bx-x' id="io" onclick="Hide()"></i>
+                          </a>
       </div>
     </nav>
     <div class="content-commands">
@@ -259,24 +260,7 @@ function myFunction() {
         oi.style.display = "block";
       }
 
-
       window.onload = () => {
-        if (location.href.indexOf("code") !== -1) { // Detect if you logged in or not
-                const code = location.href.substring(location.href.indexOf("code") + 5, location.href.length); // Get the code OAUTH gives you
-                const req = new XMLHttpRequest(); // Create a new XMLHttpRequest
-                req.open("POST", `http://localhost:${port}/user`); // Open the XMLHttpRequest;
-                req.send(code); // Send the code in the request
-                req.onload = () => { // Will run when the request is loaded
-                    if (req.status === 500) { // Error
-                        console.log(`There was an error with that. Please try logging in again. Error Code: ${req.status}`);
-                    } else if (req.status === 200) { // Successful
-                        console.log(req);
-                    } else { // Other
-                        console.log(`An error occured. Please try logging in again. Error Code: ${req.status}`);
-                    }
-
-                }
-            }
 const fragment = new URLSearchParams(window.location.hash.slice(1));
 const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
 
@@ -301,7 +285,6 @@ fetch('https://discord.com/api/users/@me', {
 })
 .catch(console.error);
 };
-
   </script>
 </body>
 </html>

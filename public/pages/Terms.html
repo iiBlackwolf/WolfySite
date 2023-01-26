@@ -30,87 +30,88 @@
    </head>
    <body>
     <div class="sidebar">
-        <div class="logo-details">
-          <img src="../assets/wolfy.png" width="30" height="30" class="bx bxl-c-plus-plus icon">
-            <div class="logo_name">WolfyBot</div>
-            <i class='bx bx-menu' id="btn" ></i>
-        </div>
-          <li>
-              <i class='bx bx-search' ></i>
-             <input type="text" id="myInput" onkeyup="myFunction()" type="text" placeholder="Search...">
-             <span class="tooltip">Search</span>
-          </li>
-          <ul class="nav-list" id="myUL">
-            <li>
-              <a href="../index.html">
-                <i class='bx bx-home' ></i>
-                <span class="links_name">Home</span>
-              </a>
-               <span class="tooltip">Home page</span>
-            </li>
-          <li>
-           <a href="#">
-            <i class='bx bxs-server' ></i>
-             <span class="links_name">Server Management</span>
-           </a>
-           <span class="tooltip">Server Management</span>
-         </li>
-         <li>
-           <a href="#">
-             <i class='bx bx-chat' ></i>
-             <span class="links_name">Messages</span>
-           </a>
-           <span class="tooltip">Messages</span>
-         </li>
-         <li>
-           <a href="pages/terms.html">
-             <i class='bx bxs-shopping-bags'></i>
-             <span class="links_name">Terms</span>
-           </a>
-           <span class="tooltip">Terms of service page!</span>
-         </li>
-         <li>
-           <a href="#">
-            <i class='bx bx-command' ></i>
-             <span class="links_name">Commands</span>
-           </a>
-           <span class="tooltip">Commands</span>
-         </li>
-         <li>
-           <a href="#">
-            <i class='bx bxs-contact' ></i>
-             <span class="links_name">Contact</span>
-           </a>
-           <span class="tooltip">Contact</span>
-         </li>
-         <li>
-           <a href="#">
-             <i class='bx bx-heart' ></i>
-             <span class="links_name">Saved</span>
-           </a>
-           <span class="tooltip">Saved</span>
-         </li>
-         <li>
-           <a href="#">
-             <i class='bx bx-cog' ></i>
-             <span class="links_name">Settings</span>
-           </a>
-           <span class="tooltip">Settings</span>
-         </li>
-         <li class="profile">
-             <div class="profile-details">
-               <img src="../assets/user.png" alt="profileImg">
-               <div class="name_job">
-                 <div class="name">Unkown User</div>
-                </div>
-              </div>
-              <div class="LOGIN">
-              <a id="LOGIN" href="/">
-              <i class='bx bx-log-in' id="log_out" ></i>
-              </a>
-            </div>
-          </li>
+      <div class="logo-details">
+        <img src="../assets/wolfy.png" width="30" height="30" class="bx bxl-c-plus-plus icon">
+          <div class="logo_name">WolfyBot</div>
+          <i class='bx bx-menu' id="btn" ></i>
+      </div>
+        <li>
+            <i class='bx bx-search' ></i>
+           <input type="text" id="myInput" onkeyup="myFunction()" type="text" placeholder="Search...">
+           <span class="tooltip">Search</span>
+        </li>
+        <ul class="nav-list" id="myUL">
+        <li>
+          <a href="../index.html">
+            <i class='bx bx-home' ></i>
+            <span class="links_name">Home</span>
+          </a>
+           <span class="tooltip">Home page</span>
+        </li>
+        <li>
+         <a href="#">
+          <i class='bx bxs-server' ></i>
+           <span class="links_name">Server Management</span>
+         </a>
+         <span class="tooltip">Server Management</span>
+       </li>
+       <li>
+         <a href="#">
+          <i class='bx bxs-check-shield' ></i>
+           <span class="links_name">Terms</span>
+         </a>
+         <span class="tooltip">Terms of service page!</span>
+       </li>
+       <li>
+         <a href="pages/Privacy.html">
+          <i class='bx bxs-lock-alt' ></i>
+           <span class="links_name">Privacy</span>
+         </a>
+         <span class="tooltip">Privacy of service page!</span>
+       </li>
+       <li>
+         <a href="pages/commands.html">
+          <i class='bx bx-command' ></i>
+           <span class="links_name">Commands</span>
+         </a>
+         <span class="tooltip">Commands</span>
+       </li>
+       <li>
+         <a>
+          <i class='bx bxs-contact' ></i>
+           <span class="links_name">Contact</span>
+         </a>
+         <span class="tooltip">Contact</span>
+       </li>
+       <li>
+         <a href="#">
+           <i class='bx bx-heart' ></i>
+           <span class="links_name">Saved</span>
+         </a>
+         <span class="tooltip">Saved</span>
+       </li>
+       <li>
+         <a href="#">
+           <i class='bx bx-cog' ></i>
+           <span class="links_name">Settings</span>
+         </a>
+         <span class="tooltip">Settings</span>
+       </li>
+      </ul>
+      <li class="profile">
+        <div class="profile-details">
+          <img id="avatar" src="../assets/user.png" alt="profileImg">
+          <div class="name_job">
+            <div id="name" class="name">Unkown User</div>
           </div>
+        </div>
+        <div class="LOGIN">
+        <a id="LOGIN" href="/">
+        <i class='bx bx-log-in' id="log_out" ></i>
+        </a>
+      </div>
+    </li>
+    </div>
       <section class="commands-section">
     
         <!--==================== HEADER ====================-->
@@ -131,8 +132,8 @@
               </a> -->
               <li><a href="../index.html">HOME</a></li>
               <li><a href="./commands.html">COMMANDS</a></li>
-              <li><a href="#">Terms</a></li>
-              <li><a href="#">INVITE</a></li>
+              <li><a href="./Privacy.html">Privacy of service</a></li>
+              <li><a href="https://discord.com/api/oauth2/authorize?client_id=821655420410003497&permissions=8&scope=bot%20applications.commands">INVITE</a></li>
             </ul>
                               <a href="javascript:void(0);" class="icon">
                                 <i class='bx bx-menu' id="oi" onclick="Show()"></i>
@@ -151,31 +152,32 @@
               <div class="content-commands-column-2-left">
                 <h1>1. Introduction</h1>
                 <p>
-                    Wolfy is a discord bot that provides various features such as moderation, information, music, Setup commands, search, logs, suggestions, economy, and leveling system.
+                  Wolfy is a discord bot that provides various features such as moderation, information, music, Setup commands, search, logs, suggestions, economy, and leveling system.
                 </p>
                 <P>
-                    By using Wolfy, you agree to abide by these terms of service.
+                    By <code>using Wolfy</code>, you <code-style-inline-red>agree</code-style-inline-red> to abide by these terms of service.
                 </P>
+               </ul>
                 <h1>2. Use of Wolfy.</h1>
                 <p>
-                    Wolfy is intended for use on Discord servers and should not be used for any illegal or unauthorized activities.
+                    Wolfy is intended for use on Discord servers and should not be used for any <code>illegal or unauthorized activities.</code>
                 </p>
                 <P>
-                    You are responsible for the actions of your server members when using Wolfy.
+                    You are responsible for the <code-style-inline-red>actions</code-style-inline-red> of your server members when using Wolfy.
                 </P>
                 <h1>3. Limitations of Liability</h1>
                 <p>
-                    Wolfy is provided "as is" and the developers of Wolfy will not be held liable for any damages arising from the use of the bot.
+                    Wolfy is provided "as is" and the developers of Wolfy will not be held liable for any <code-style-inline-red>damages</code-style-inline-red> arising from the use of the bot.
                 </p>
                 <P>
-                    The developers of Wolfy reserve the right to discontinue the bot at any time and will not be liable for any damages caused by the discontinuation of the bot.
+                    The developers of Wolfy reserve the <code>right</code> to discontinue the bot at any time and will not be liable for any <code-style-inline-red>damages</code-style-inline-red> caused by the discontinuation of the bot.
                 </P>
                 <h1>4. Changes to Terms of Service</h1>
                 <p>
-                    The developers of Wolfy reserve the right to update and change these terms of service at any time.
+                    The developers of Wolfy reserve the right to update and change these terms of service at <code>any time.</code>
                 </p>
                 <P>
-                    Your continued use of Wolfy after any changes to these terms of service indicates your acceptance of the new terms.
+                    Your <code>continued</code> use of Wolfy after any changes to these terms of service indicates your acceptance of the new terms.
                 </P>
                 <h1>5. Data stored by wolfy</h1>
                 <p>
@@ -191,6 +193,9 @@
                 <h1>Contact Information</h1>
                 <p>
                     If you have any questions or concerns about these terms of service or the use of Wolfy, please contact the developers of the bot.
+                </p>
+                <p>
+                  <strong>Privacy</strong> of service page <a href="./Privacy.html">here!</a>
                 </p>
               </div>
             </div>

@@ -24,84 +24,88 @@
 
    <body>
     <div class="sidebar">
-        <div class="logo-details">
-          <img src="../assets/wolfy.png" width="30" height="30" class="bx bxl-c-plus-plus icon">
-            <div class="logo_name">WolfyBot</div>
-            <i class='bx bx-menu' id="btn" ></i>
-        </div>
-          <li>
-              <i class='bx bx-search' ></i>
-             <input type="text" id="myInput" onkeyup="myFunction()" type="text" placeholder="Search...">
-             <span class="tooltip">Search</span>
-          </li>
-          <ul class="nav-list" id="myUL">
-            <li>
-              <a href="../index.html">
-                <i class='bx bx-home' ></i>
-                <span class="links_name">Home</span>
-              </a>
-               <span class="tooltip">Home page</span>
-            </li>
-          <li>
-           <a href="#">
-            <i class='bx bxs-server' ></i>
-             <span class="links_name">Server Management</span>
-           </a>
-           <span class="tooltip">Server Management</span>
-         </li>
-         <li>
-           <a href="#">
-             <i class='bx bx-chat' ></i>
-             <span class="links_name">Messages</span>
-           </a>
-           <span class="tooltip">Messages</span>
-         </li>
-         <li>
-           <a href="#/">
-             <i class='bx bxs-shopping-bags'></i>
-             <span class="links_name">Market</span>
-           </a>
-           <span class="tooltip">Market</span>
-         </li>
-         <li>
-           <a href="pages/test.html">
-            <i class='bx bx-command' ></i>
-             <span class="links_name">Commands</span>
-           </a>
-           <span class="tooltip">Commands</span>
-         </li>
-         <li>
-           <a href="#">
-            <i class='bx bxs-contact' ></i>
-             <span class="links_name">Contact</span>
-           </a>
-           <span class="tooltip">Contact</span>
-         </li>
-         <li>
-           <a href="#">
-             <i class='bx bx-heart' ></i>
-             <span class="links_name">Saved</span>
-           </a>
-           <span class="tooltip">Saved</span>
-         </li>
-         <li>
-           <a href="#">
-             <i class='bx bx-cog' ></i>
-             <span class="links_name">Settings</span>
-           </a>
-           <span class="tooltip">Settings</span>
-         </li>
-         <li class="profile">
-             <div class="profile-details">
-               <img src="../assets/user.png" alt="profileImg">
-               <div class="name_job">
-                 <div class="name">Unkown User</div>
-               </div>
-             </div>
-             <i class='bx bx-log-out' id="log_out" ></i>
-         </li>
-        </ul>
+      <div class="logo-details">
+        <img src="../assets/wolfy.png" width="30" height="30" class="bx bxl-c-plus-plus icon">
+          <div class="logo_name">WolfyBot</div>
+          <i class='bx bx-menu' id="btn" ></i>
       </div>
+        <li>
+            <i class='bx bx-search' ></i>
+           <input type="text" id="myInput" onkeyup="myFunction()" type="text" placeholder="Search...">
+           <span class="tooltip">Search</span>
+        </li>
+        <ul class="nav-list" id="myUL">
+        <li>
+          <a href="#">
+            <i class='bx bx-home' ></i>
+            <span class="links_name">Home</span>
+          </a>
+           <span class="tooltip">Home page</span>
+        </li>
+        <li>
+         <a href="#">
+          <i class='bx bxs-server' ></i>
+           <span class="links_name">Server Management</span>
+         </a>
+         <span class="tooltip">Server Management</span>
+       </li>
+       <li>
+         <a href="pages/Terms.html">
+          <i class='bx bxs-check-shield' ></i>
+           <span class="links_name">Terms</span>
+         </a>
+         <span class="tooltip">Terms of service page!</span>
+       </li>
+       <li>
+         <a href="pages/Privacy.html">
+          <i class='bx bxs-lock-alt' ></i>
+           <span class="links_name">Privacy</span>
+         </a>
+         <span class="tooltip">Privacy of service page!</span>
+       </li>
+       <li>
+         <a href="pages/commands.html">
+          <i class='bx bx-command' ></i>
+           <span class="links_name">Commands</span>
+         </a>
+         <span class="tooltip">Commands</span>
+       </li>
+       <li>
+         <a>
+          <i class='bx bxs-contact' ></i>
+           <span class="links_name">Contact</span>
+         </a>
+         <span class="tooltip">Contact</span>
+       </li>
+       <li>
+         <a href="#">
+           <i class='bx bx-heart' ></i>
+           <span class="links_name">Saved</span>
+         </a>
+         <span class="tooltip">Saved</span>
+       </li>
+       <li>
+         <a href="#">
+           <i class='bx bx-cog' ></i>
+           <span class="links_name">Settings</span>
+         </a>
+         <span class="tooltip">Settings</span>
+       </li>
+      </ul>
+      <li class="profile">
+        <div class="profile-details">
+          <img id="avatar" src="../assets/user.png" alt="profileImg">
+          <div class="name_job">
+            <div id="name" class="name">Unkown User</div>
+          </div>
+        </div>
+        <div class="LOGIN">
+        <a id="LOGIN" href="/">
+        <i class='bx bx-log-in' id="log_out" ></i>
+        </a>
+      </div>
+    </li>
+    </div>
       <script>
   let sidebar = document.querySelector(".sidebar");
   let closeBtn = document.querySelector("#btn");
