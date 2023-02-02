@@ -13,7 +13,7 @@ $(function(){
   
       var $commands = $('#commands-list');
   
-      $.getJSON('https://raw.githubusercontent.com/iiBlackwolf/Simple-CommandsHandler/master/commands.json', function(data, status){
+      $.getJSON('https://raw.githubusercontent.com/iiBlackwolf/WolfySite/master/commands.json', function(data, status){
   
         $.each(data, function(_, command){
   
@@ -54,7 +54,7 @@ $(function(){
                 ${command.parameters?.map(x => '<code>' + x + '</code>').join(' ') || '<code> None </code>'}
                 <br><br>
                 Example/s:<br>
-                ${command.examples?.map(x => '<code> w!' + x + '</code>').join(' ')}
+                ${command.examples?.map(x => '<code>' + x + '</code>').join(' ')}
               </p>
              </div>
             </div>
