@@ -13,7 +13,7 @@ $(function(){
   
       var $commands = $('#commands-list');
   
-      $.getJSON('https://raw.githubusercontent.com/iiBlackwolf/WolfySite/master/commands.json', function(data, status){
+      $.getJSON('https://raw.githubusercontent.com/iiBlackwolf/WolfySite/master/assets/json/commands-database.json', function(data, status){
   
         $.each(data, function(_, command){
   
