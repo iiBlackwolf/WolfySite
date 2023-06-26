@@ -5,7 +5,7 @@
 	const { URLSearchParams } = require('url'); // can also use form-data
 	const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 	const client_id = '821655420410003497';
-	const client_secret = 'x53URql5XG2xKe4Hh_JS5qnyz-X-5huY';
+	const client_secret = '';
 
     const app = express();
 
